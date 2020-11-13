@@ -4,3 +4,15 @@
   margin: auto;
   display: block;
 }
+
+.ulrFilme{
+  color: darkorchid;
+  font-style: oblique;
+}
+.imgtrailer{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 2px;
+  padding: 2px;
+}

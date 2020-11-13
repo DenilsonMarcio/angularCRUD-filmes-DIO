@@ -7,4 +7,5 @@ export interface Filme {
   nota: number;
   urlIMDb?: string;
   genero: string;
+  linkTrailer?: string;
 }

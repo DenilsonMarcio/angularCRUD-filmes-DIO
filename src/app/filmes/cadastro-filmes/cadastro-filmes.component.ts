@@ -39,7 +39,7 @@ export class CadastroFilmesComponent implements OnInit {
       this.criarFormulario(this.criarFilmeEmBranco());
     }
 
-    this.generos = ['Ação', 'Romance', 'Aventura', 'Terror', 'Ficção cientifica', 'Comédia', 'Aventura', 'Drama'];
+    this.generos = ['Ação', 'Romance', 'Terror', 'Ficção cientifica', 'Comédia', 'Aventura', 'Drama', 'Mistério', 'Desenho'];
 
   }
 
@@ -70,7 +70,9 @@ export class CadastroFilmesComponent implements OnInit {
       descricao: [filme.descricao],
       nota: [filme.nota, [Validators.required, Validators.min(0), Validators.max(10)]],
       urlIMDb: [filme.urlIMDb, [Validators.minLength(10)]],
-      genero: [filme.genero, [Validators.required]]
+      genero: [filme.genero, [Validators.required]],
+      linkTrailer: [filme.linkTrailer, [Validators.minLength]]
+
     });
   }
 
@@ -83,7 +85,8 @@ export class CadastroFilmesComponent implements OnInit {
       descricao: null,
       nota: null,
       urlImdb: null,
-      genero: null
+      genero: null,
+      linkTrailer: null
     } as Filme;
   }
 
